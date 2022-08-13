@@ -12,6 +12,14 @@ app.get('/', (req, res) => {
   res.send('Hello World');
 });
 
+app.get('/healthz', (req, res) => {
+	res.send('OK');
+  });
+
+app.get('/readyz', (req, res) => {
+res.send('OK');
+});
+
 function blockCpuFor(ms) {
 	let now = new Date().getTime();
 	let result = 0
